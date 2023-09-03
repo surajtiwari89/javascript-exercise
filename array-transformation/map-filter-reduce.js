@@ -18,3 +18,30 @@ const redarrsub = arr.reduce((a,c)=>a-c);
 console.log(redarr);
 console.log(redarrsub);
 
+const redarrreal = arr.reduce(function(sum,arrvalue){
+    sum=sum+arrvalue;
+return sum;
+},0);//! we provide the initial value in as second argument 
+console.log(redarrreal)
+console.log("new")
+
+// similar to 
+function reducefn(arrvalue){
+ let sum = 0
+   for(let i = 0;i<arr.length;i++) {
+    sum = sum + arr[i];
+   }
+   return sum;
+   }
+
+console.log(reducefn(arr));
+
+//! finding max in the array 
+
+const maxarr = arr.reduce((max,arrvlu)=>{
+    if(arrvlu>max){
+        max=arrvlu;
+    }
+    return max;
+},0)
+console.log(maxarr)
