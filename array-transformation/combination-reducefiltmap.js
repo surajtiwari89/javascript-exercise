@@ -4,7 +4,8 @@ const arr = [
     { firstName: "Alok", lastName: "Updaya", age: 30 },
     { firstName: "Piyush", lastName: "Mishra", age: 30 },
 ]
-
+const arrmp = arr.map()
+console.log(arr[1].age)
 // const arrfiltered = arr.filter(x => x.age >= 28).map(x => x.firstName + " " + x.lastName);
 
 // console.log(arrfiltered);
@@ -28,19 +29,32 @@ const arr = [
 function countAges(arr){
     const a = {};
     for(const x of arr){
-        const age = x.age;
-        if(a[age]){
-            a[age]++;
+        if(a[x.age]){  
+//! accumulator -->previous value accumulated 
+//! a[array index= x.age]  
+
+arr[x.age]
+            a[x.age]++;
         }
         else{
-            a[age] = 1;
+            a[x.age] = 1;
         }
     }
     return a;
 }
 
 
-console.log(countAges(arr))
+function traver(arr){
+    const a = {};
+    for ( const x of arr){
+        // console.log(x.age);
+        a["age"] = x.age;
+    }
+    return a;
+}
+ console.log(traver(arr))
+
+// console.log(countAges(arr))
 
 
 
